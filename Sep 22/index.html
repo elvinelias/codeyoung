@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Counter</title>
+</head>
+<body>
+    <h2>Letter Counter</h2>
+    <label for="userInput">Enter a string:</label>
+    <input type="text" id="userInput">
+    <button onclick="countLetters()">Count Letters</button>
+
+    <h3>Total Number of Letters:</h3>
+    <p id="output"></p>
+
+    <script>
+        function countLetters() {
+            const input = document.getElementById('userInput').value;
+            const output = document.getElementById('output');
+            let letterCount = 0;
+
+            for (let char of input) {
+                const lowerChar = char.toLowerCase();
+                if (lowerChar >= 'a' && lowerChar <= 'z') {
+                    letterCount += 1;
+                }
+            }
+
+            output.textContent = `Total letters: ${letterCount}`;
+        }
+    </script>
+</body>
+</html>

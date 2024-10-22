@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop Example</title>
+</head>
+<body>
+
+    <h2>Car Object Properties</h2>
+    <div id="output"></div>
+
+    <script>
+        const car = {
+            make: "Toyota",
+            model: "Corolla",
+            year: 2020,
+            color: "Blue"
+        };
+
+        const outputDiv = document.getElementById('output');
+        let outputText = "<ul>";
+
+        for (let property in car) {
+            outputText += `<li>${property}: ${car[property]}</li>`;
+        }
+
+        outputText += "</ul>";
+        outputDiv.innerHTML = outputText;
+    </script>
+
+</body>
+</html>
